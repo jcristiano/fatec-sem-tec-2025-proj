@@ -33,8 +33,8 @@ A interface utiliza **Bootstrap** para um visual moderno e responsivo.
 
 ### 1️⃣ Clonar o repositório
 ```bash
-git clone https://github.com/seuusuario/seuprojeto.git
-cd seuprojeto
+git clone https://github.com/jcristiano/fatec-sem-tec-2025-proj.git
+cd fatec-sem-tec-2025-proj
 ```
 
 ### 2️⃣ Criar e ativar ambiente virtual
