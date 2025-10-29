@@ -10,3 +10,15 @@ class Listing(models.Model):
 
     def __str__(self):
         return self.title
+    
+class ListingImage(models.Model):
+    anuncio = models.ForeignKey(
+        Listing,
+        on_delete=models.CASCADE,
+        related_name='imagens'
+    )
+    imagem = models.ImageField(upload_to='anuncios/')
+    legenda = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return f"Imagem de {self.anuncio.title}"

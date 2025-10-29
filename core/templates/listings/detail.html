@@ -8,6 +8,14 @@
     <h4 class="text-primary">R$ {{ listing.price }}</h4>
     <hr>
     <p>{{ listing.description }}</p>
+    {% for img in anuncio.imagens.all %}
+      <div class="foto">
+        <img src="{{ img.imagem.url }}" alt="{{ img.legenda }}">
+          {% if img.legenda %}<p>{{ img.legenda }}</p>{% endif %}
+      </div>
+    {% empty %}
+      <p>Sem imagens para este anúncio.</p>
+    {% endfor %}
     <a href="/" class="btn btn-outline-secondary mt-3">⬅ Voltar</a>
   </div>
 </div>
